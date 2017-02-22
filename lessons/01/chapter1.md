@@ -1,7 +1,5 @@
 ---
-layout: page
 title: Creating Objects
-permalink: /lessons/creating_objects/
 ---
 
 Before starting this lesson, you should know the following concepts:

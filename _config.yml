@@ -30,4 +30,11 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
-  
+
+defaults:
+  - scope:
+      path: "lessons"
+    values:
+      layout: "lesson"
+      tags:
+        - "lesson"

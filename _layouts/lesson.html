@@ -1,0 +1,21 @@
+---
+layout: page
+---
+{{content}}
+
+{% for p in site.pages %}
+    {% if p.title == page.title %}
+        {% assign prev = forloop.index0 | minus: 1 %}
+        {% assign next = forloop.index %}
+    {% endif %}
+{% endfor %}
+
+{{ site.tags["lesson"] }}
+
+{% if prev >= 0 and site.pages[prev].url contains "lessons" %} 
+    <a href="{{site.pages[prev].url}}">Previous Chapter</a>
+{% endif %}
+{% if site.pages[next].url contains "lessons" %}
+    <a href="{{site.pages[next].url}}">Next Chapter</a>
+{% endif %}
+

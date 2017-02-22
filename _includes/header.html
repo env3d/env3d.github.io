@@ -14,14 +14,14 @@
       </span>
 
       <div class="trigger">
-        {% for my_page in site.pages %}
-          {% assign url_parts = my_page.url | split: "/" %}
-          {% assign url_size = url_parts | size %}
-          <!-- Only render top level static pages as menu items -->
-          {% if url_size <= 2 %}
-          <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-          {% endif %}
-        {% endfor %}
+          {% for my_page in site.pages %}
+              {% assign url_parts = my_page.url | split: "/" %}
+              {% assign url_size = url_parts | size %}
+              <!-- Only render top level static pages as menu items -->
+              {% if url_size <= 2 %}
+                  <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+              {% endif %}
+          {% endfor %}
       </div>
     </nav>
 

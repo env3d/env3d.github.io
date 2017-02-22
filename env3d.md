@@ -27,7 +27,8 @@ In the old days, progammers use text editors (like notepad on Windows), to write
 While some programmers and some situations still require the use of multiple tools, nowadays, professional programmers often use an Intergrated Development Environment (IDE) to do their work.  An IDE puts together all of the tools that a programmer needs and package it into a common and consistent interface.  This helps programmers to be more productive as all the tools are "at their fingertips".
 
 For students, using IDEs also simplfies the programming process, as students don't have to learn to use multiple seemingly unrelated tools.  The problem is that professional IDEs are often very complicated itself and requires a great deal of prior knowledge in order to use them effectively.  BlueJ is an IDE designed for students in mind, so BlueJ is the ideal IDE for us to use.
-Starting BlueJ
+
+# Starting BlueJ
 
 When you start BlueJ, you get a blank window.  Go to "Project->Open", then navigate to the place where you extracted your env3d_template directory.  You'll see the the env3d_template directory shows up as a BlueJ project.  Double click on it to open it.
 The Env3D project
