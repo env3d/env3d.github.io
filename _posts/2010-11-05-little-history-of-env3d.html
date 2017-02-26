@@ -1,0 +1,16 @@
+---
+layout: post
+title: A little history of Env3D
+date: '2010-11-05T14:49:00.000-07:00'
+author: Jason Madar
+tags:
+- env3d
+- computer science
+- history
+- 3D graphics
+modified_time: '2010-11-05T14:53:43.531-07:00'
+blogger_id: tag:blogger.com,1999:blog-8298481343865845891.post-3263484912363365573
+blogger_orig_url: http://env3d.blogspot.com/2010/11/little-history-of-env3d.html
+---
+
+One of my students asked me recently about the history of Env3D.  I thought I'd share it here:<br /><br />It was 2002, I wanted to learn opengl and see if there was any way Java can use hardware acceleration. During my research, I came across 2 opengl wrapper libraries: LWJGL and JOGL. LWJGL is a community driven project while JOGL is supported by Sun (the company behind Java).<br /><br />While the logical decision was to go with JOGL, I decided to use LWJGL instead as it has a much more active and vibrant community (just visit http://lwjgl.org to see for yourself). The result was a simple 3D engine which I used to create a few simple demos, but nothing that students can actually use.<br /><br />Fast forward to 2006, machines have gotten more powerful and 3D hardware acceleration is available on even the cheapest of the motherboards, so I thought it might be interesting to use 3D graphics to teach first year Java. At the same time, we switched to the BlueJ textbook which is excellent, but in my opinion, lacks the "visual punch". So I started writing the first version of Env3D to support the textbook. That first version was based on the simple engine that I created back in 2002.<br /><br />After using Env3D for the first time back in 2007, I realized that the library can be used for much more than just to support BlueJ -- it is actually a general purpose library that students can use to create fun little flash like games. There are 2 problems:<br /><br />1) It's not easy to distribute the game to others -- it's not good to have your user install BlueJ and the Java JDK.<br /><br />2) The underlying engine was not powerful enough to support high-end features like bone animation, shaders, etc.<br /><br />The first problem was relatively easy to solve, it turned out that the LWJGL community had already come up with a way to turn LWJGL programs into applets! So I modified some of my code and added a a new feature in the Env3D-BlueJ extension to automate the creation of applets.<br /><br />The second problem was much harder to solve, in order to support state-of-the-art graphical features, I needed to re-program my custom engine. I decided that it was too much work for one guy, so I started looking around for an alternative engine that Env3D can be based on. My research resulted in the javamonkey engine (http://www.jmonkeyengine.com/ ). It is an open-source engine that has all the features that I wanted, and it uses LWJGL for rendering! So for the past many months, I worked really hard to switch the internals of Env3D to use the Java Monkey engine. The version that you are using right now is the result of my months-long effort. In theory, future versions of Env3D can now use all of the features of the JavaMonkey engine!<br /><br />So, in a nutshell, this is how the Env3D library look now:<br /><br />Your program --> Env3D --> Java Monkey Engine --> LWJGL --> 3D hardware.

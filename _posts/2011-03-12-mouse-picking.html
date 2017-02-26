@@ -1,0 +1,19 @@
+---
+layout: post
+title: Mouse picking
+date: '2011-03-12T09:24:00.000-08:00'
+author: Jason Madar
+tags:
+- env3d
+- programming
+- gaming
+- 3D graphics
+- feature
+- mouse
+- java
+modified_time: '2011-03-12T09:31:38.017-08:00'
+blogger_id: tag:blogger.com,1999:blog-8298481343865845891.post-1177589320240568900
+blogger_orig_url: http://env3d.blogspot.com/2011/03/mouse-picking.html
+---
+
+The latest version of env3d adds the ability to use the mouse to interact with objects in 3D space.  <br /><br />Previously, the only mouse position related methods are Env.getMouseX(), and Env.getMouseY().  These methods return only the screen coordinates but not the pointer coordinates in 3D space.  This makes it hard to implement features such as using a mouse of select an object inside the 3D environment.<br /><br />Users of env3d now has a few more methods to use, the details can be found at http://env3d.org/beta/node/113.<br /><br />Perhaps that most important method is Env.getPick(int screenX, int screenY).  This method takes the screen's x and y coordinate and returns the first object in 3D space under that coordinate.  The object returned is of the generic Object type so users will have to cast it to the appropriate type before using it.

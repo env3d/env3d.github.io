@@ -1,0 +1,15 @@
+---
+layout: post
+title: New features and some lessons learned
+date: '2007-10-20T20:36:00.000-07:00'
+author: Jason Madar
+tags:
+- programming
+- teaching
+- 3D graphics
+modified_time: '2007-11-20T09:23:35.237-08:00'
+blogger_id: tag:blogger.com,1999:blog-8298481343865845891.post-3668686322084854451
+blogger_orig_url: http://env3d.blogspot.com/2007/10/new-features-and-some-lessons-learned.html
+---
+
+The latest version of env3d (still in cvs, not released yet) will have the following new features:<br /><ul><li>Transparent sprite support</li><li>Setting of camera angles</li><li>All resources can be loaded from a jar file.</li></ul>Since all resources are now loaded from a jar file, you can distribute your application very easily.  If you are using BlueJ, you can simply export the project to a jar file.  Make sure that the lwjgl native library (lwjgl.dll in windows) is in the same directory as your jar.  You can now execute the jar file directly.<br /><br />This also means any application written using env3d can be setup to use java webstart technology.  This will be a big plus for students who want to show off their projects!  In the future, I may even incorporate applet support.<br /><br />New features are great and all, but in my opinion, the most important update is the <span style="font-style: italic;">removal</span> of some of the features.<br /><ul><li>The "move" method will no longer be called automatically<br /></li><li>Adding a room will no longer automatically add all the objects inside the room</li><li>Adding of "systems" are not supported</li></ul>What this means is that every object must be added/removed manually (by students).  Env3d is meant to be a learning engine, and as I gain more experience using it, I find that it is best to make the engine do as little "magic" as possible.  The only magic here is being able to put objects into a 3d environment.  The rest should be done manually.<br /><br />I am having so much fun using env3d in my class this term.  I think that my students are having fun as well.  I am able to create examples in Env3d that map almost directly to each chapter of the textbook, I will share them on the website once I have some time (end of term most likely).
