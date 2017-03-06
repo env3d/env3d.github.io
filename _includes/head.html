@@ -1,0 +1,28 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="keywords" content="java 3d engine, best 3d engine, java 3d programming, 3d programming, 3d engine, java 3d, learn java, learn programming, learn 3d java, learn 3d programming, 3d java" />
+  <meta name="copyright" content="Copyright © 2011, Env3d" />
+  <meta name="description" content="Env3D is an innovative 3D engine written in Java. With Env3D, it is fun and easy to create 3D video games while learning Java Programming." />
+  <meta name="abstract" content="Learn Java Programming in 3D" />
+  <meta name="dc.contributor" content="Env3d Community" />
+  <meta name="dc.creator" content="Jason Madar" />
+  <meta name="dc.description" content="Env3D is an innovative 3D engine written in Java. With Env3D, it is fun and easy to create 3D video games while learning Java Programming." />
+  <meta name="dc.publisher" content="Kenny MacKenzie" />
+  <meta name="geo.position" content="49.297479;-123.089876" />
+  <meta name="icbm" content="49.297479,-123.089876" />
+  <meta name="revisit-after" content="1 day" />
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+  {% include google-analytics.html %}
+  {% endif %}
+</head>

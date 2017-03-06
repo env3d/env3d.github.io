@@ -19,7 +19,7 @@ Hint: to check if your Doty object is close to a Food object, use the distance()
 
 Your final program should look similar to the following video:
 
-<object width="480" height="385"> <param name="movie" value="http://www.youtube.com/v/yglFOC5MPeI?fs=1&amp;hl=en_US"> <param name="allowFullScreen" value="true"> <param name="allowscriptaccess" value="always"><embed src="http://www.youtube.com/v/yglFOC5MPeI?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></object>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yglFOC5MPeI" frameborder="0" allowfullscreen></iframe>
 
 # Code Listing
 
