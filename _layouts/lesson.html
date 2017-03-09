@@ -12,10 +12,16 @@ layout: page
 
 {{ site.tags["lesson"] }}
 
+{% if site.GH_ENV == 'gh_pages' %}
+    {% assign base = "/env3d.org" %}
+{% else %}
+    {% assign base = "" %}    
+{% endif %}
+
 {% if prev >= 0 and site.pages[prev].url contains "lessons" %} 
-    <a href="{{site.pages[prev].url}}">Previous Chapter</a>
+    <a href="{{site.pages[prev].url | prepend: base}}">Previous Chapter</a>
 {% endif %}
 {% if site.pages[next].url contains "lessons" %}
-    <a href="{{site.pages[next].url}}">Next Chapter</a>
+    <a href="{{site.pages[next].url | prepend: base}}">Next Chapter</a>
 {% endif %}
 
